@@ -18,7 +18,7 @@ function SideBar() {
         </InputContainer>
       </MasterInput>
       
-      <UserDetails/>
+      <UserDetails name='Eric Lombardo' title='Front-End Dev'/>
 
       <Details>
         <Label>
@@ -27,13 +27,13 @@ function SideBar() {
         </Label>
 
         <CardList>
-          <Card/>
-          <Card/>
+          <Card isLate={true}/>
+          <Card isLate={true}/>
         </CardList>
       </Details>
       </div>
 
-      <UserDetails />
+      <UserDetails name='Eric Lombardo' title='Front-End Dev'/>
     </MasterSidebar>
   );
 }
@@ -44,8 +44,9 @@ const MasterSidebar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 180px;
-  background-color: #f2f4f7;
+  width: 230px;
+  background-color: #f2f2f2;
+  height: 80vh;
 `
 const MasterInput = styled.div`
   background-color: white;
@@ -59,7 +60,6 @@ const InputContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 0 10px
-  justify-content: center;
   border-radius: 4px;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
 `
@@ -93,7 +93,7 @@ const LabelText = styled.p`
   font-weight: bold;
 `
 const Details = styled.div`
-  background-color: #f2f4f7;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

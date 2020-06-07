@@ -12,9 +12,11 @@ function Title() {
 
 export default Title;
 
-const Text = styled.h1`
+const Text = styled.p`
   margin: 0;
-  padding: 15px;
+  padding: 10px;
   background-color: #fff;
-  border-bottom: solid 2px rgba(0, 0, 0, 0.1)
+  border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: bold;
 `

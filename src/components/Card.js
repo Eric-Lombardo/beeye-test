@@ -4,9 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faCommentAlt } from '@fortawesome/free-solid-svg-icons'
 
 
-function Card() {
+function Card(props) {
+  const {isLate} = props
+
   return (
     <MasterCard>
+
+      {isLate ? <ColorAccent style={{backgroundColor: '#cd8080'}}></ColorAccent> : <ColorAccent></ColorAccent>}
       
       <Header>
         <Badge>15 NOV</Badge>
@@ -21,10 +25,10 @@ function Card() {
 
       <Footer>
         <Group>
-          <FontAwesomeIcon icon={faHome} color='#cbcbcb' size='sm'/>
+          <FontAwesomeIcon icon={faHome} color='#cbcbcb' size='xs'/>
           <Text>Domicile</Text>
         </Group>
-        <FontAwesomeIcon icon={faCommentAlt} color='#cbcbcb' size='sm'/>
+        <FontAwesomeIcon icon={faCommentAlt} color='#cbcbcb' size='xs'/>
       </Footer>
 
     </MasterCard>
@@ -34,12 +38,23 @@ function Card() {
 export default Card;
 
 const MasterCard = styled.div`
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   margin-bottom: 5px;
-  width: 110px;
+  width: 127px;
+  position: relative;
+  overflow: hidden;
+`
+const ColorAccent = styled.div`
+  background-color: #cfd0d0;
+  height: 10px;
+  width: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: -5px;
+  right: 5px;
 `
 const Header = styled.div`
   display: flex;
@@ -58,7 +73,7 @@ const Badge = styled.p`
 const Time = styled.p`
   color: #535c6e;
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
 `
 const Company = styled.p`
   color: #687185;
@@ -69,7 +84,7 @@ const Company = styled.p`
 `
 const Tag = styled.p`
   color: black;
-  margin: 3px 0;
+  margin: 1px 0;
   font-weight: bold;
   font-style: normal;
   font-size: 10px;

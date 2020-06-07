@@ -10,7 +10,7 @@ function CalenderNav() {
       <Left>
         <Button>
           <Icon><FontAwesomeIcon icon={faMapMarkerAlt} color='orange'/></Icon>
-          Aujourd'hui
+          <Text>Aujourd'hui</Text>
         </Button>
 
         <Button>
@@ -41,19 +41,19 @@ function CalenderNav() {
 
         <Button>
           <Icon><FontAwesomeIcon icon={faPause} color='orange'/></Icon>
-          Écran Divisé
+          <Text>Écran Divisé</Text>
         </Button>
       </Left>
 
       <Right>
         <BadgeContainer>
           <Badge>10</Badge>
-          <span>Conflits</span>
+          <Text>Conflits</Text>
         </BadgeContainer>
 
         <BadgeContainer>
           <Icon><FontAwesomeIcon icon={faSlidersH} color='orange'/></Icon>
-          Personnaliser
+          <Text>Personnaliser</Text>
         </BadgeContainer>
 
       </Right>
@@ -64,24 +64,28 @@ function CalenderNav() {
 export default CalenderNav;
 
 const MasterCalender = styled.div`
-  margin-top: 2px;
   background-color: #fff9f2;
-  height: 50px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px 0;
 `
 const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   outline: none;
   background-color: white;
   color: black;
   margin: 0 5px;
   cursor: pointer;
-  height: 40px;
-  padding: 0 15px;
+  height: 30px;
+  padding: 0 8px;
   border-radius: 4px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  min-width: 35px;
 `
 const Icon = styled.span`
   cursor: pointer;
@@ -91,7 +95,7 @@ const Options = styled.select`
   border: none;
   outline: none;
   background-color: white;
-  height: 40px;
+  height: 30px;
   color: black;
   border-radius: 10px;
   padding: 0 15px;
@@ -116,11 +120,11 @@ const Right = styled.div`
 const BadgeContainer = styled.div`
   background-color: white;
   display: flex;
-  height: 40px;
-  padding: 0 20px;
+  height: 30px;
+  padding: 0 10px;
   border-radius: 20px;
   align-items: center;
-  margin-right: 5px;
+  margin-right: 10px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 `
 const Badge = styled.div`
@@ -133,4 +137,9 @@ const Badge = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
+`
+const Text = styled.p`
+  font-size: 12px;
+  margin: 0;
 `
