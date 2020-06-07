@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.css';
+import styled from "styled-components"
 import Header from './components/Header'
 import Title from './components/Title'
 import CalenderNav from './components/CalenderNav'
 import SideBar from './components/SideBar'
-import './App.css';
+import MainDisplay from './components/MainDisplay'
 
 function App() {
   return (
@@ -11,9 +13,17 @@ function App() {
       <Header />
       <Title />
       <CalenderNav />
-      <SideBar />
+
+      <MainView>
+        <SideBar />
+        <MainDisplay />
+      </MainView>
     </div>
   );
 }
 
 export default App;
+
+const MainView = styled.div`
+  display: flex;
+`

@@ -7,12 +7,12 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 function UserDetails() {
   return (
     <MasterUser>
-      <User src={'https://www.placecage.com/50/50'}/>
+      <User src={'https://www.placecage.com/30/30'}/>
       <UserContainer>
         <Text>Nom du Collaborateur</Text>
         <SubText>Poste du Collaborateur</SubText>
       </UserContainer>
-      <FontAwesomeIcon icon={faChevronDown} color='grey' size='lg'/>
+      <FontAwesomeIcon icon={faChevronDown} color='grey'/>
     </MasterUser>
   );
 }
@@ -22,7 +22,7 @@ const MasterUser = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 5px;
+  padding: 10px 5px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 `
@@ -34,10 +34,10 @@ const UserContainer = styled.div`
 `
 const Text = styled.p`
   margin: 0;
-  font-size: 18px;
+  font-size: 10px;
 `
 const SubText = styled.p`
   margin: 0;
-  font-size: 14px;
+  font-size: 8px;
   color: #b7bfd6
 `

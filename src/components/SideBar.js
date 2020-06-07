@@ -10,9 +10,10 @@ function SideBar() {
   return (
     <MasterSidebar>
 
+      <div>
       <MasterInput>
         <InputContainer>
-          <Icon><FontAwesomeIcon icon={faSearch} color='grey' size='lg'/></Icon>
+          <Icon><FontAwesomeIcon icon={faSearch} color='grey'/></Icon>
           <Input type='text' placeholder='Rechercher' />
         </InputContainer>
       </MasterInput>
@@ -30,6 +31,7 @@ function SideBar() {
           <Card/>
         </CardList>
       </Details>
+      </div>
 
       <UserDetails />
     </MasterSidebar>
@@ -41,9 +43,9 @@ export default SideBar;
 const MasterSidebar = styled.div`
   display: flex;
   flex-direction: column;
-  // background-color: blue;
-  height: 100vh;
-  width: 30vw;
+  justify-content: space-between;
+  width: 180px;
+  background-color: #f2f4f7;
 `
 const MasterInput = styled.div`
   background-color: white;
@@ -51,7 +53,7 @@ const MasterInput = styled.div`
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 `
 const InputContainer = styled.div`
-  height: 70px;
+  height: 30px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -62,12 +64,12 @@ const InputContainer = styled.div`
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
 `
 const Input = styled.input`
-  height: 40px;
+  height: 20px;
   border: none;
   outline: none;
   width: 100%;
   margin-right: 5px; 
-  font-size: 22px;
+  font-size: 15px;
 `
 const Icon = styled.div`
   margin: 0 20px;
@@ -75,22 +77,28 @@ const Icon = styled.div`
 const Label = styled.div`
   display: flex;
   background-color: rgba(225, 114, 114, 0.2);
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  width: 120px;
+  padding: 5px;
   border-radius: 4px;
-  align-self: flex-start;
+  transform: scale(0.8);
+  margin-left: -7px;
+  margin-bottom: 5px;
 `
-const LabelText = styled.div`
+const LabelText = styled.p`
   color: #ff7272;
+  margin: 0;
   margin-left: 10px;
+  font-size: 10px;
+  font-weight: bold;
 `
 const Details = styled.div`
   background-color: #f2f4f7;
   display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
 `
 const CardList = styled.div`
   display: flex;

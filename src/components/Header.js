@@ -41,6 +41,7 @@ const MasterHeader = styled.div`
   display: flex;
   justify-content: space-between;
   height: 50px;
+  width: 100%;
 `
 const Button = styled.button`
   border: none;
